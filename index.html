@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar.T - Designer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Language Selection Screen -->
+    <div id="lang-select">
+        <h2 id="choose-lang">Choose your language / Выберите язык</h2>
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('ru')">Русский</button>
+    </div>
+
+    <!-- Main Content -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#hero" data-en="Home" data-ru="Главная">Home</a></li>
+            <li><a href="#gallery" data-en="Gallery" data-ru="Галерея">Gallery</a></li>
+            <li><a href="#about" data-en="About" data-ru="Обо мне">About</a></li>
+        </ul>
+        <div class="switches">
+            <button id="lang-switch">RU</button>
+            <button id="theme-switch">🌙</button>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <img src="images/logo.jpg" alt="-" class="profile-photo">
+        <h1>Omar.T</h1>
+        <h2 data-en="Designer" data-ru="Дизайнер">Designer</h2>
+        <p data-en="I am a designer who creates visuals that tell stories. I work with branding, UI, and creative digital design."
+           data-ru="Я дизайнер, который создает визуалы с душой. Работаю с брендингом, UI и креативным цифровым дизайном."></p>
+    </section>
+
+    <section id="gallery">
+        <h2 data-en="Gallery" data-ru="Галерея"></h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openModal('images/image1.jpg')">
+                <img src="images/image2.jpg" alt="Image 1">
+                <p data-en="Buisness Cards" data-ru="Бизнес Карточки"></p>
+            </div>
+            <div class="gallery-item" onclick="openModal('images/image2.jpg')">
+                <img src="images/image1.jpg" alt="Image 2">
+                <p data-en="Creative Logo Design" data-ru="Креативный логотип"></p>
+            </div>
+            <div class="gallery-item" onclick="openModal('images/image3.jpg')">
+                <img src="images/image3.jpg" alt="Image 3">
+                <p data-en="Presintations" data-ru="Презинтации"></p>
+            </div>
+            <div class="gallery-item" onclick="openModal('images/image4.jpg')">
+                <img src="images/image5.jpg" alt="">
+                <p data-en="----" data-ru="----"></p>
+            </div>
+            <div class="gallery-item" onclick="openModal('images/image5.jpg')">
+                <img src="images/image4.jpg" alt="Image 5">
+                <p data-en="Flyer" data-ru="Флаер"></p>
+            </div>
+            <div class="gallery-item" onclick="openModal('images/image6.jpg')">
+                <img src="images/image6.jpg" alt="">
+                <p data-en="----" data-ru="----"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 data-en="About Me" data-ru="Обо мне"></h2>
+        <p data-en="🌟 Universal Designer Description (Professional + Friendly)
+
+Hey there! 👋 I’m a passionate graphic designer who loves turning creative ideas into stunning visuals. Whether you need a logo, social media post, banner, or full brand identity, I’ll help your project stand out with clean, modern, and professional design.
+
+✅ 100% original & unique concepts
+✅ Fast and reliable communication
+✅ Unlimited revisions until you’re satisfied
+✅ Delivery in high-quality formats (PNG, JPG, SVG, PDF, etc.)
+
+Let’s make your brand look amazing — contact me today and let’s start creating something special! 🎨"
+           data-ru="🌟 Описание для Universal Designer (Профессиональный + Дружелюбный)
+
+Привет! 👋 Я — увлеченный графический дизайнер, который обожает превращать креативные идеи в потрясающие визуальные образы. Нужен ли вам логотип, пост для соцсетей, баннер или полноценный фирменный стиль, я помогу вашему проекту выделиться благодаря лаконичному, современному и профессиональному дизайну.
+
+✅ 100% оригинальные и уникальные концепции
+✅ Быстрая и надежная коммуникация
+✅ Неограниченное количество правок до вашего удовлетворения
+✅ Предоставление в высококачественных форматах (PNG, JPG, SVG, PDF и т. д.)
+
+Давайте сделаем ваш бренд потрясающим — свяжитесь со мной сегодня, и мы начнем создавать что-то особенное!🎨"></p>
+    </section>
+
+    <section id="contact">
+    <h2 data-en="My Contacts" data-ru="Мои контакты">My Contacts</h2>
+    <div class="contact-links">
+        <a href="https://t.me/taffomvp" class="contact-btn" target="_blank" data-en="Telegram" data-ru="Телеграм">Telegram</a>
+        <a href="https://www.instagram.com/omarfiverr/" class="contact-btn" target="_blank" data-en="Instagram" data-ru="Инстаграм">Instagram</a>
+    </div>
+</section>
+
+    <footer>
+        <p>© 2025 Omar Taffo. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for Gallery -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-img" src="" alt="Modal Image">
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
